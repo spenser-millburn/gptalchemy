@@ -86,7 +86,7 @@ set -x OPENAI_API_KEY your_api_key
 ```
 ### install dependencies
 ```
-apt update && apt install -y jq 
+sudo apt update && sudo apt install -y jq 
 pip install fastapi uvicorn shell-gpt rich
 ```
 
