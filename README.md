@@ -69,6 +69,9 @@ project_folder/
    - Generates a detailed tree of subsystems and implements each as a FastAPI app.
    - Usage: `gptarchitect_recursive "System description"`
 
+## Disclaimer 
+These scripts (by definition) index the entire repository to OPENAI servers. Do not use this tool on proprietary codebases to avoid IP loss. Feature coming soon to connect to OLLAMA based offline models. 
+
 ## Requirements
 - fish shell
 - shell-gpt
