@@ -5,14 +5,14 @@ This repository contains a powerful set of GPT wrappers designed to streamline v
 ## Features
 
 - **gptcreate**: Creates a new project based on a user-supplied prompt, generating the necessary files and folder structure.
+- **gptrefactor**: Analyzes the current project files and generates a refactor plan, including creating, moving, deleting, and modifying files.
 - **gptmodify**: Modifies existing project files based on a user-supplied prompt.
 - **gptask**: Executes a GPT prompt based on the current project context.
 - **gpttest**: Generates unit tests for the project using pytest.
 - **gptsuggest**: Provides suggestions for changes to achieve a specific goal.
 - **gptguard**: Validates user input by asking GPT to respond with a simple "true" or "false".
 
-## Advanced features
-- **gptrefactor**: Analyzes the current project files and generates a refactor plan, including creating, moving, deleting, and modifying files.
+## Advanced features [ Experimental / Beta ] 
 - **gptarchitect**: Generates a list of subsystems based on a system description and implements each subsystem as a FastAPI app.
 - **gptarchitect_recursive**: Generates a detailed tree of subsystems and implements each as a FastAPI app.
 
