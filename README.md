@@ -96,7 +96,7 @@ find . -type f -name '*.fish' -exec mv {} ~/.config/fish/functions/
 ```
 ## Testing
 
-Unit tests are written using pytest. To run the tests, use the following command:
+Unit tests are written using pytest. After generating the tests with `gpttest <optionally ask for specific test cases>`, use the following command:
 ```
 pytest
 ```
