@@ -102,5 +102,5 @@ pytest
 ```
 
 ## Author
-
-This project was generated using ShellGPT, a command-line tool for automating project setup and management.
+Wrapper implementation: Spenser Millburn
+Full credit to the incredible shell-gpt for making this possible. 
