@@ -16,6 +16,21 @@ This repository contains a powerful set of GPT wrappers designed to streamline v
 - **gptarchitect**: Generates a list of subsystems based on a system description and implements each subsystem as a FastAPI app.
 - **gptarchitect_recursive**: Generates a detailed tree of subsystems and implements each as a FastAPI app.
 
+## Project Structure
+
+```
+project_folder/
+    ├── gptcreate.fish
+    ├── gptmodify.fish
+    ├── gptrefactor.fish
+    ├── gptask.fish
+    ├── gptsuggest.fish
+    ├── gpttest.fish
+    ├── gptguard.fish
+    ├── gptarchitect.fish
+    ├── gptarchitect_recursive.fish
+    └── README.md
+```
 ## How to Use
 
 1. **gptcreate**:
