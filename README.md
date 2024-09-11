@@ -66,7 +66,7 @@ project_folder/
    - Usage: `gptarchitect "System description"`
 
 9. **gptarchitect_recursive**:
-   - Generates a detailed tree of subsystems and implements each as a FastAPI app.
+   - Generates a tree of subsystems and implements recursively implements each as a FastAPI app.
    - Usage: `gptarchitect_recursive "System description"`
 
 ## Disclaimer 
