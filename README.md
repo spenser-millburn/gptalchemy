@@ -18,7 +18,7 @@ This repository contains a powerful set of GPT wrappers designed to streamline v
 
 ## Project Structure
 
-```fish
+```bash
 project_folder/
     ├── gptcreate.fish
     ├── gptmodify.fish
