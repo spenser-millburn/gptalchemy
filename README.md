@@ -79,7 +79,10 @@ project_folder/
 - fish shell
 
 ## Installation
-ENSURE OPENAI_API_KEY is set with your openai api key.
+ENSURE OPENAI_API_KEY is set with your openai api key. You might consider putting this in your ~/.config/fish/config.fish
+```
+set -x OPENAI_API_KEY your_api_key
+```
 
 ```
 pip install fastapi uvicorn shell-gpt
