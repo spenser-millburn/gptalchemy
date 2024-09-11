@@ -1,6 +1,6 @@
 # Project Overview
 
-This repository contains a powerful set of GPT wrappers designed to streamline various development tasks. The goal here is to minimize contact with code and leverage the power of GPTs to manipulate the codebase with prompts.
+This repository contains a powerful set of GPT wrappers designed to streamline various development tasks. The goal of this project to minimize developer contact with code and leverage the power of GPTs to manipulate the codebase with prompts.
 
 ## Features
 
