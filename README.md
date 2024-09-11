@@ -79,9 +79,10 @@ project_folder/
 - fish shell
 
 ## Installation
+ENSURE OPENAI_API_KEY is set with your openai api key.
 
 ```
-pip install fastapi uvicorn
+pip install fastapi uvicorn shell-gpt
 ```
 all fish functions in this repository to .config/fish/functions
 
