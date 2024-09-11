@@ -88,8 +88,13 @@ set -x OPENAI_API_KEY your_api_key
 ```
 pip install fastapi uvicorn shell-gpt
 ```
-all fish functions in this repository to .config/fish/functions
 
+### move all functions repository to .config/fish/functions
+```
+#run this from the root of the gptalchemy repo
+mkdir -p ~/.config/fish/functions
+find . -type f -name '*.fish' -exec mv {} ~/.config/fish/functions/
+```
 ## Testing
 
 Unit tests are written using pytest. To run the tests, use the following command:
