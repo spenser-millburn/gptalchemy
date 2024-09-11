@@ -70,13 +70,14 @@ project_folder/
    - Usage: `gptarchitect_recursive "System description"`
 
 ## Requirements
-
+- fish shell
+- shell-gpt
 - Python 3.8+
 - FastAPI
 - Uvicorn
 - jq (for JSON processing)
-- fish shell
-
+- rich
+  
 ## Installation
 ### OPENAI API key setup
 OPENAI_API_KEY is set with your openai api key. You might consider putting this in your ~/.config/fish/config.fish
@@ -85,7 +86,8 @@ set -x OPENAI_API_KEY your_api_key
 ```
 ### install dependencies
 ```
-pip install fastapi uvicorn shell-gpt
+apt update && apt install -y jq 
+pip install fastapi uvicorn shell-gpt rich
 ```
 
 ### move all functions repository to .config/fish/functions
