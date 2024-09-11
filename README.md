@@ -91,8 +91,9 @@ pip install fastapi uvicorn shell-gpt rich
 ```
 
 ### move all functions repository to .config/fish/functions
+- *run this from the root of the gptalchemy repo*
+
 ```
-#run this from the root of the gptalchemy repo
 mkdir -p ~/.config/fish/functions
 find . -type f -name '*.fish' -exec mv {} ~/.config/fish/functions/ \;
 ```
