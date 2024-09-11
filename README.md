@@ -62,14 +62,14 @@ project_folder/
    - Usage: `gptguard "Your validation prompt"`
   
      ```
-     [I] ~/.c/f/functions ❯❯❯ if gptguard "is the sky red"                                                                     master ✱ ◼
+     [I] ~/.c/f/functions ❯❯❯ if gptguard "is the sky red"                  
                                  echo "no thats not right"
                          else
                                  echo "yes thats correct"
                          end
      no thats not right
      
-     [I] ~/.c/f/functions ❯❯❯ if gptguard "is the sky blue"                                                                    master ✱ ◼
+     [I] ~/.c/f/functions ❯❯❯ if gptguard "is the sky blue"                
                                  echo "no thats not right"
                          else
                                  echo "yes thats correct"
