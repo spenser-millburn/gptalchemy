@@ -46,7 +46,7 @@ project_folder/
    - Usage: `gptrefactor "Refactor prompt"`
 
 4. **gptask**:
-   - Executes a GPT prompt based on the current project context.
+   - Ask gpt about anything in the current directory or its children.
    - Usage: `gptask "Your prompt"`
 
 5. **gptsuggest**:
