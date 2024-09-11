@@ -60,6 +60,23 @@ project_folder/
 7. **gptguard**:
    - Validates user input by asking GPT to respond with "true" or "false".
    - Usage: `gptguard "Your validation prompt"`
+  
+     ```
+     [I] ~/.c/f/functions ❯❯❯ if gptguard "is the sky red"                                                                     master ✱ ◼
+                                 echo "no thats not right"
+                         else
+                                 echo "yes thats correct"
+                         end
+     no thats not right
+     
+     [I] ~/.c/f/functions ❯❯❯ if gptguard "is the sky blue"                                                                    master ✱ ◼
+                                 echo "no thats not right"
+                         else
+                                 echo "yes thats correct"
+                         end
+
+        yes thats correct
+     ```
 
 8. **gptarchitect**:
    - Generates and implements subsystems as FastAPI apps.
