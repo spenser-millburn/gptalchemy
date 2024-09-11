@@ -1,6 +1,6 @@
 # Project Overview
 
-This repository contains a powerful set of GPT wrappers designed to streamline various development and system administration tasks. These wrappers leverage the capabilities of GPT to automate and enhance workflows, making it easier to manage projects, generate code, refactor existing code, and more.
+This repository contains a powerful set of GPT wrappers designed to streamline various development tasks. The goal here is to minimize contact with code and leverage the power of GPTs to manipulate the codebase with prompts.
 
 ## Features
 
