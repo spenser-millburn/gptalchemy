@@ -94,7 +94,7 @@ pip install fastapi uvicorn shell-gpt rich
 ```
 #run this from the root of the gptalchemy repo
 mkdir -p ~/.config/fish/functions
-find . -type f -name '*.fish' -exec mv {} ~/.config/fish/functions/
+find . -type f -name '*.fish' -exec mv {} ~/.config/fish/functions/ \;
 ```
 ## Testing
 
