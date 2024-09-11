@@ -1,1 +1,0 @@
-[   {     "./Dockerfile": "Modify the Dockerfile to include the installation of jq, python3, uvicorn, pytest, docker, docker-compose, and sgpt."   } ]
