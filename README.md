@@ -1,0 +1,99 @@
+# Project Overview
+
+This repository contains a powerful set of GPT wrappers designed to streamline various development and system administration tasks. These wrappers leverage the capabilities of GPT to automate and enhance workflows, making it easier to manage projects, generate code, refactor existing code, and more.
+
+## Features
+
+- **gptarchitect**: Generates a list of subsystems based on a system description and implements each subsystem as a FastAPI app.
+- **gptask**: Executes a GPT prompt based on the current project context.
+- **gptguard**: Validates user input by asking GPT to respond with a simple "true" or "false".
+- **gptrefactor**: Analyzes the current project files and generates a refactor plan, including creating, moving, deleting, and modifying files.
+- **gptmodify**: Modifies existing project files based on a user-supplied prompt.
+- **gptcreate**: Creates a new project based on a user-supplied prompt, generating the necessary files and folder structure.
+- **gptsuggest**: Provides suggestions for changes to achieve a specific goal.
+- **gptarchitect_recursive**: Generates a detailed tree of subsystems and implements each as a FastAPI app.
+- **gpttest**: Generates unit tests for the project using pytest.
+
+## Project Structure
+
+```
+project_folder/
+    ├── gptarchitect.fish
+    ├── gptask.fish
+    ├── gptguard.fish
+    ├── gptrefactor.fish
+    ├── gptmodify.fish
+    ├── gptcreate.fish
+    ├── gptsuggest.fish
+    ├── gptarchitect_recursive.fish
+    ├── gpttest.fish
+    └── README.md
+```
+
+## How to Use
+
+1. **gptarchitect**:
+   - Generates and implements subsystems as FastAPI apps.
+   - Usage: `gptarchitect "System description"`
+
+2. **gptask**:
+   - Executes a GPT prompt based on the current project context.
+   - Usage: `gptask "Your prompt"`
+
+3. **gptguard**:
+   - Validates user input by asking GPT to respond with "true" or "false".
+   - Usage: `gptguard "Your validation prompt"`
+
+4. **gptrefactor**:
+   - Analyzes and refactors the current project files.
+   - Usage: `gptrefactor "Refactor prompt"`
+
+5. **gptmodify**:
+   - Modifies existing project files based on a user-supplied prompt.
+   - Usage: `gptmodify "Modification prompt"`
+
+6. **gptcreate**:
+   - Creates a new project based on a user-supplied prompt.
+   - Usage: `gptcreate "Project description"`
+
+7. **gptsuggest**:
+   - Provides suggestions for changes to achieve a specific goal.
+   - Usage: `gptsuggest "Goal description"`
+
+8. **gptarchitect_recursive**:
+   - Generates a detailed tree of subsystems and implements each as a FastAPI app.
+   - Usage: `gptarchitect_recursive "System description"`
+
+9. **gpttest**:
+   - Generates unit tests for the project using pytest.
+   - Usage: `gpttest "Test requirements"`
+
+## Requirements
+
+- Python 3.8+
+- FastAPI
+- Uvicorn
+- jq (for JSON processing)
+- fish shell
+
+## Installation
+
+Install the required packages using pip:
+```
+pip install fastapi uvicorn
+```
+
+## Testing
+
+Unit tests are written using pytest. To run the tests, use the following command:
+```
+pytest
+```
+
+## Dockerization
+
+The project can be dockerized for easier deployment. Ensure you have Docker installed and follow the instructions in the Dockerfile to build and run the Docker containers.
+
+## Author
+
+This project was generated using ShellGPT, a command-line tool for automating project setup and management.
