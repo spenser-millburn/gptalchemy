@@ -78,10 +78,10 @@ project_folder/
 
 ## Installation
 
-Install the required packages using pip:
 ```
 pip install fastapi uvicorn
 ```
+all fish functions in this repository to .config/fish/functions
 
 ## Testing
 
@@ -89,10 +89,6 @@ Unit tests are written using pytest. To run the tests, use the following command
 ```
 pytest
 ```
-
-## Dockerization
-
-The project can be dockerized for easier deployment. Ensure you have Docker installed and follow the instructions in the Dockerfile to build and run the Docker containers.
 
 ## Author
 

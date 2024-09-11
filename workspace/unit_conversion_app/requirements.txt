@@ -1,6 +1,0 @@
-Sure, here is a simple requirements.txt file with just the package names listed:
-
-requests
-django
-numpy
-pandas

@@ -18,10 +18,10 @@ function gptcreate
 
     set json_structure "A list of dictionaries, each with a filename as the key and a description as the value."
     
-    set json_prompt "please create a json array describing each of the files required, as well as the critical methods
+    set json_prompt "please create a parsable json array describing each of the files required, as well as the critical methods
     and their method signatures/return types.
     The key should be the file path and the value should be a description of the implementation without going into extreme detail.
-    The structure of this file should be $json_structure."
+    The structure of this file should be $json_structure. ensure you respond with nothing but the json content for my file"
 
     set typer_wrapper_prompt "This project should be implemented as a typer cli wrapper that is separate from the business logic file(s).
     please do not respond with any code yet"
