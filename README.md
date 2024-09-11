@@ -20,55 +20,54 @@ This repository contains a powerful set of GPT wrappers designed to streamline v
 
 ```
 project_folder/
-    ├── gptarchitect.fish
-    ├── gptask.fish
-    ├── gptguard.fish
-    ├── gptrefactor.fish
-    ├── gptmodify.fish
     ├── gptcreate.fish
+    ├── gptmodify.fish
+    ├── gptrefactor.fish
+    ├── gptask.fish
     ├── gptsuggest.fish
-    ├── gptarchitect_recursive.fish
     ├── gpttest.fish
+    ├── gptguard.fish
+    ├── gptarchitect.fish
+    ├── gptarchitect_recursive.fish
     └── README.md
 ```
-
 ## How to Use
 
-1. **gptarchitect**:
-   - Generates and implements subsystems as FastAPI apps.
-   - Usage: `gptarchitect "System description"`
-
-2. **gptask**:
-   - Executes a GPT prompt based on the current project context.
-   - Usage: `gptask "Your prompt"`
-
-3. **gptguard**:
-   - Validates user input by asking GPT to respond with "true" or "false".
-   - Usage: `gptguard "Your validation prompt"`
-
-4. **gptrefactor**:
-   - Analyzes and refactors the current project files.
-   - Usage: `gptrefactor "Refactor prompt"`
-
-5. **gptmodify**:
-   - Modifies existing project files based on a user-supplied prompt.
-   - Usage: `gptmodify "Modification prompt"`
-
-6. **gptcreate**:
+1. **gptcreate**:
    - Creates a new project based on a user-supplied prompt.
    - Usage: `gptcreate "Project description"`
 
-7. **gptsuggest**:
+2. **gptmodify**:
+   - Modifies existing project files based on a user-supplied prompt.
+   - Usage: `gptmodify "Modification prompt"`
+
+3. **gptrefactor**:
+   - Analyzes and refactors the current project files.
+   - Usage: `gptrefactor "Refactor prompt"`
+
+4. **gptask**:
+   - Executes a GPT prompt based on the current project context.
+   - Usage: `gptask "Your prompt"`
+
+5. **gptsuggest**:
    - Provides suggestions for changes to achieve a specific goal.
    - Usage: `gptsuggest "Goal description"`
 
-8. **gptarchitect_recursive**:
-   - Generates a detailed tree of subsystems and implements each as a FastAPI app.
-   - Usage: `gptarchitect_recursive "System description"`
-
-9. **gpttest**:
+6. **gpttest**:
    - Generates unit tests for the project using pytest.
    - Usage: `gpttest "Test requirements"`
+
+7. **gptguard**:
+   - Validates user input by asking GPT to respond with "true" or "false".
+   - Usage: `gptguard "Your validation prompt"`
+
+8. **gptarchitect**:
+   - Generates and implements subsystems as FastAPI apps.
+   - Usage: `gptarchitect "System description"`
+
+9. **gptarchitect_recursive**:
+   - Generates a detailed tree of subsystems and implements each as a FastAPI app.
+   - Usage: `gptarchitect_recursive "System description"`
 
 ## Requirements
 
