@@ -7,5 +7,5 @@ function gcm
         git config --global user.name "Your Name"
     end
 
-    git commit -am "g diff : $diff , status: $stat. please write a 5 word commit message"
+    git commit -am (g "diff : $diff , status: $stat. please write a 5 word commit message")
 end
