@@ -5,6 +5,7 @@ function gpttest
     # Set up  
     h1 Unit Testing Generation Started
     set project_context (walk_and_cat_source)
+    mkdir -p tests
     
     # Prompt the plan
     # --------------------------------------------------------------------------------------------------------
@@ -14,7 +15,29 @@ function gpttest
 
     set code_language "The tests should be written in Python using pytest as the test framework."
 
-    set json_structure "A list of dictionaries, each with a filename as the key and a description as the value."
+    set json_structure 'A list of dictionaries, that contain the methods being tested and the test cases like so
+[
+  {
+    "filename": "test_one.py",
+    "description": {
+      "methods": [
+        "exponential_search"
+      ],
+      "test_cases": []
+    }
+  },
+  {
+    "filename": "test_two.py",
+    "description": {
+      "methods": [
+        "linear_search"
+      ],
+      "test_cases": []
+    }
+  }
+]
+
+    '
     
     set json_prompt "please create a json array describing each of the test files required for testing the project's functionality.
     Include the test file paths, a description of each test, the methods to be tested, and their respective test cases.

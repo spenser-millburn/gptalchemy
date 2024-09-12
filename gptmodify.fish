@@ -40,14 +40,15 @@ function gptmodify
         set modification_desc (echo $item | jq -r '.[keys[0]]')
 
         e "Modifying $file_name based on: $modification_desc"
-        g "$modification_desc" "please modify this file according to the description, here is the current file content:" (cat $file_name) > $file_name
+        set filter_code_only "Please respond with only the code as this file will be executed. "
+        g "$modification_desc". $filter_code_only "please modify this file according to the description, here is the current file content:" (cat $file_name) > $file_name
     end
 
     # --------------------------------------------------------------------------------------------------------
     h1 "                                  MODIFICATION REVIEW                                                  "
     # --------------------------------------------------------------------------------------------------------
 
-    walk_and_cat_source | g please review these modified files and identify any issues with the changes > MODIFICATION_REVIEW.md
+    walk_and_cat_source | g please review these modified files and identify any issues with the changes, respond 100 words or less as markdown bullet points > MODIFICATION_REVIEW.md
     mdview MODIFICATION_REVIEW.md
 
     # e --------------------------------------------------------------------------------------------------------

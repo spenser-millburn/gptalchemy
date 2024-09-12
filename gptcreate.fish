@@ -18,8 +18,7 @@ function gptcreate
 
     set json_structure "A list of dictionaries, each with a filename as the key and a description as the value."
     
-    set json_prompt "please create a json array describing each of the files required, as well as the critical methods
-    and their method signatures/return types.
+    set json_prompt "please create a json array describing each of the files required, as well as all methods and their method signatures/return types. 
     The key should be the file path and the value should be a description of the implementation without going into extreme detail.
     The structure of this file should be $json_structure."
 
@@ -27,9 +26,11 @@ function gptcreate
     please do not respond with any code yet"
 
     set relative_only_prompt "Please make all file paths relative to the current working directory"
+    set typing_prompt 'list[int]` with `List[int]` and import `List` from the `typing` module to ensure compatibility with the Python version being used'
+ 
 
 
-    set json (g from $code_language. $overview . $json_prompt  . $typer_wrapper_prompt . $relative_only_prompt)
+    set json (g from $code_language. $overview . $json_prompt  . $typer_wrapper_prompt . $relative_only_prompt. $typing_prompt)
     e JSON:
 
     set json_file_name files.json
@@ -74,12 +75,12 @@ function gptcreate
     # --------------------------------------------------------------------------------------------------------
     walk_and_cat_source | g please identify any problems > REVIEWME.md
     mdview REVIEWME.md
-    if gptguard "(cat REVIEWME.md)"
-      h1 Fixing Issues 
-      gptmodify (cat REVIEWME.md)
-    else
-      h1 No Problems 
-    end
+    # if gptguard "(cat REVIEWME.md)"
+      # h1 Fixing Issues
+      # gptmodify (cat REVIEWME.md)
+    # else
+      # h1 No Problems
+    # end
 
     #   --------------------------------------------------------------------------------------------------------
     h1 "DOCUMENTATION"
@@ -87,7 +88,7 @@ function gptcreate
     walk_and_cat_source | g please wriite a nicely formatted, but minimal and to the point markdown README file, respond with the content of this file only > README.md
     mdview ./README.md
     create_python_requirements_txt
-    dockerize
+    # dockerize
     # autorun
     cd $cwd
 end
