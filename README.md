@@ -17,6 +17,11 @@ A powerful set of GPT/LLM based wrappers designed to catalyze and automate softw
 - **gptarchitect**: Generates a list of subsystems based on a system description and implements each subsystem as a FastAPI app.
 - **gptarchitect_recursive**: Generates a detailed tree of subsystems and implements each as a FastAPI app.
 
+## Quickstart Run  With Docker Compose
+```
+docker compose run -it cli bash 
+```
+
 ## Project Structure
 
 ```bash
@@ -124,6 +129,7 @@ Unit tests are written using pytest. After generating the tests with `gpttest <o
 ```
 pytest
 ```
+
 
 ## Author
 Wrapper implementation: Spenser Millburn
