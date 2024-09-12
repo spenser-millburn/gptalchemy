@@ -1,4 +1,4 @@
 function gptiterate
-gptmodify (gptsuggest (autorun -y) ) 
+gptmodify (gptsuggest (autorun -y) ) "$argv"
 
 end
