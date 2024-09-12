@@ -20,6 +20,10 @@ WORKDIR /root/.config/fish/functions
 COPY *.fish .
 COPY ./utils/*.fish .
 WORKDIR /root/workspace
+RUN apt-get install git
+RUN git config --global guser.email "docker@gptalchemy.com"
+RUN git config --global user.name "gptalchemy"
+
 
 # Start fish shell
 CMD ["fish"]
