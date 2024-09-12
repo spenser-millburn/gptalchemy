@@ -17,9 +17,9 @@ A powerful set of GPT/LLM based wrappers designed to catalyze and automate softw
 - **gptarchitect**: Generates a list of subsystems based on a system description and implements each subsystem as a FastAPI app.
 - **gptarchitect_recursive**: Generates a detailed tree of subsystems and implements each as a FastAPI app.
 
-## Quickstart Run  With Docker Compose
+## Quick Start
 ```
-docker compose run -it cli bash 
+docker compose run -it cli fish -c "gptcreate a minimal application for converting units"
 ```
 
 ## Project Structure
