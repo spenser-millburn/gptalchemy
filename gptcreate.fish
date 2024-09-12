@@ -90,5 +90,6 @@ function gptcreate
     create_python_requirements_txt
     # dockerize
     # autorun
+    if not test -d .git; git init; end
     cd $cwd
 end
