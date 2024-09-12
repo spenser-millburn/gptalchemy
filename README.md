@@ -1,6 +1,7 @@
 # Project Overview
 
-This repository contains a powerful set of GPT wrappers designed to streamline various development tasks. The goal of this project to minimize developer contact with code and leverage the power of GPTs to manipulate the codebase with prompts.
+A powerful set of GPT/LLM based wrappers designed to catalyze and automate software development and iteration. The goal of this project to minimize developer contact with code and leverage the power of GPTs to manipulate the codebase with prompts.
+
 
 ## Features
 
@@ -15,6 +16,11 @@ This repository contains a powerful set of GPT wrappers designed to streamline v
 ## Advanced features [ Experimental / Beta ] 
 - **gptarchitect**: Generates a list of subsystems based on a system description and implements each subsystem as a FastAPI app.
 - **gptarchitect_recursive**: Generates a detailed tree of subsystems and implements each as a FastAPI app.
+
+## Quick Start
+```
+docker compose run -it cli fish -c "gptcreate a minimal application for converting units"
+```
 
 ## Project Structure
 
@@ -123,6 +129,7 @@ Unit tests are written using pytest. After generating the tests with `gpttest <o
 ```
 pytest
 ```
+
 
 ## Author
 Wrapper implementation: Spenser Millburn
