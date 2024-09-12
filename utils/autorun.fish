@@ -10,7 +10,7 @@ function autorun
     set run_command (g "$run_prompt")
 
     e $run_command
-    e $run_command | clip
+    # e $run_command | clip
 
     set response
     if test (count $argv) -gt 0

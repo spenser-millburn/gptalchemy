@@ -84,6 +84,7 @@ project_folder/
         yes thats correct
      ```
 
+
 8. **gptarchitect**:
    - Generates and implements subsystems as FastAPI apps.
    - Usage: `gptarchitect "System description"`
