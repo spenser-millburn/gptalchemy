@@ -27,26 +27,22 @@ docker compose run -it cli fish -c "gptcreate a minimal application for converti
 ```bash
 project_folder/
     ├── gptcreate.fish
-    ├── gptiterate.fish
     ├── gptmodify.fish
     ├── gptrefactor.fish
     ├── gptask.fish
     ├── gptsuggest.fish
     ├── gpttest.fish
     ├── gptguard.fish
+    ├── gptiterate.fish
     ├── gptarchitect.fish
     ├── gptarchitect_recursive.fish
     └── README.md
 ```
 ## How to Use
 
-0. **gptcreate**:
+1. **gptcreate**:
    - Creates a new project based on a user-supplied prompt.
    - Usage: `gptcreate "Project description"`
-
-1. **gptiterate**:
-   - Modifies existing project files by automatically running the project and iterating based on the result. 
-   - Usage: `gptiterate "Optionally provide what you want to iterate on"`
 
 2. **gptmodify**:
    - Modifies existing project files based on a user-supplied prompt.
@@ -88,6 +84,10 @@ project_folder/
 
         yes thats correct
      ```
+
+1. **gptiterate**:
+   - Modifies existing project files by automatically running the project and iterating based on the result. 
+   - Usage: `gptiterate "Optionally provide what you want to iterate on"`
 
 
 8. **gptarchitect**:
