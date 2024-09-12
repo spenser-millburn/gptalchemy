@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  cli:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    command: sh

@@ -20,7 +20,7 @@ function gptrefactor
     # Define the structure for refactor actions, now including directory creation
     set refactor_json_structure "A list of dictionaries, each with an 'operation' key specifying the action ('create', 'create_dir', 'move', 'delete', 'modify')."
 
-    set move_create_keys "For 'create' operations, include 'file' and 'content' keys.
+    set move_create_keys "For 'create' operations, include 'file' and 'description' keys.
                           For 'move' operations, include 'source' and 'destination' keys.
                           For 'create_dir' operations, include a 'directory' key. 
                           For 'modify' operations, include 'file' and 'description' keys."
@@ -32,16 +32,16 @@ function gptrefactor
     # Generate the refactor plan
     set refactor_plan (g "$refactor_prompt" "$file_overview_json" "$refactor_json_prompt" "$filter_no_changes")
     
-    e --------------------------------------------------------------------------------------------------------
-    e "                                  REFACTOR PLAN                                                        "
-    e --------------------------------------------------------------------------------------------------------
+    # --------------------------------------------------------------------------------------------------------
+    h1 "                                  REFACTOR PLAN                                                        "
+    # --------------------------------------------------------------------------------------------------------
     echo $refactor_plan | tee refactor_plan.json | jq
 
     set refactor_plan_file refactor_plan.json
 
-    e --------------------------------------------------------------------------------------------------------
-    e "                                  APPLYING REFACTOR ACTIONS                                             "
-    e --------------------------------------------------------------------------------------------------------
+    # --------------------------------------------------------------------------------------------------------
+    h1 "                                  APPLYING REFACTOR ACTIONS                                             "
+    # --------------------------------------------------------------------------------------------------------
 
     # Process each action in the refactor plan
     for item in (cat $refactor_plan_file | jq -c '.[]')
@@ -50,7 +50,6 @@ function gptrefactor
         switch $operation
             case "create"
                 set file_name (echo $item | jq -r '.file')
-                set file_content (echo $item | jq -r '.content')
                 set new_dir (dirname $file_name)
 
                 # Create the directory if necessary
@@ -61,7 +60,7 @@ function gptrefactor
 
                 # Create the file with the provided content
                 e "Creating file $file_name"
-                echo "$file_content" > $file_name
+                echo $item | g (jq -r '.description') > $file_name
                 continue
 
             case "create_dir"
@@ -122,9 +121,9 @@ function gptrefactor
         end
     end
 
-    e --------------------------------------------------------------------------------------------------------
-    e "                                  REFACTOR REVIEW                                                      "
-    e --------------------------------------------------------------------------------------------------------
+    # --------------------------------------------------------------------------------------------------------
+    h1 "                                  REFACTOR REVIEW                                                      "
+    # --------------------------------------------------------------------------------------------------------
 
     # Review the modified files and identify any issues with the changes
     walk_and_cat_source | g "Please review these modified files and identify any issues with the changes" > REFACTOR_REVIEW.md

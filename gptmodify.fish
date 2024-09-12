@@ -44,7 +44,7 @@ function gptmodify
     end
 
     # --------------------------------------------------------------------------------------------------------
-    h1"                                  MODIFICATION REVIEW                                                  "
+    h1 "                                  MODIFICATION REVIEW                                                  "
     # --------------------------------------------------------------------------------------------------------
 
     walk_and_cat_source | g please review these modified files and identify any issues with the changes > MODIFICATION_REVIEW.md
