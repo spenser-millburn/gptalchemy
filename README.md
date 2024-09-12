@@ -22,6 +22,7 @@ A powerful set of GPT/LLM based wrappers designed to catalyze and automate softw
 ```
 docker compose run -it cli fish -c "gptcreate a minimal application for converting units"
 ```
+The built project will be located in the ./workspace directory. 
 
 ## Project Structure
 
