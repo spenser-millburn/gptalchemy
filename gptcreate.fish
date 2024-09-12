@@ -65,7 +65,7 @@ function gptcreate
         e $file_name : $file_content_desc
         
         # Generate the file content using GPT
-        g "I would like you to please implement the following $file_content_desc and only respond with the file content. For context, here is the entire current repo (walk_and_cat_source)" > $file_name
+        g "I would like you to please implement the following $file_content_desc and only respond with the file content. Please make sure the code is implemented in $code_language unless its a requirements.txt or something" > $file_name
     end
 
     remove_code_blocks
