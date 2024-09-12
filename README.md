@@ -14,6 +14,7 @@ A powerful set of GPT/LLM based wrappers designed to catalyze and automate softw
 - **gptguard**: Validates user input by asking GPT to respond with a simple "true" or "false".
 
 ## Advanced features [ Experimental / Beta ] 
+- **gptiterate**: Iterate on the current repository by running it and addressing problems in the output
 - **gptarchitect**: Generates a list of subsystems based on a system description and implements each subsystem as a FastAPI app.
 - **gptarchitect_recursive**: Generates a detailed tree of subsystems and implements each as a FastAPI app.
 
