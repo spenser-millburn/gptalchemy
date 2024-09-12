@@ -19,6 +19,7 @@ RUN chsh -s /usr/bin/fish
 WORKDIR /root/.config/fish/functions
 COPY *.fish .
 COPY ./utils/*.fish .
+WORKDIR /root/workspace
 
 # Start fish shell
 CMD ["fish"]
