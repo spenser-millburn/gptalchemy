@@ -9,7 +9,7 @@ function gptrefactor
     set project_context (walk_and_cat_source)
 
     # Define the structure of the current files overview
-    set json_structure "A list of dictionaries, each with a filename as the key and a description of the current file contents."
+    set json_structure "A list of dictionaries, each with a filename as the key and a description of the current file contents., please only respond with the json file contents and make sure its parsable"
     set json_prompt "Please describe the current files in the project. The key should be the file path, and the value should be a brief description of the current contents. The structure of this file should be $json_structure"
 
     # Generate a file overview in JSON format
@@ -18,8 +18,35 @@ function gptrefactor
     # echo $file_overview_json | tee file_overview.json | jq
 
     # Define the structure for refactor actions, now including directory creation
-    set refactor_json_structure "A list of dictionaries, each with an 'operation' key specifying the action ('create', 'create_dir', 'move', 'delete', 'modify')."
-
+    set example_file 'here is an example of what the file might look like [
+  {
+    "operation": "create",
+    "file": "example.txt",
+    "description": "Create a new text file named example.txt"
+  },
+  {
+    "operation": "create_dir",
+    "directory": "new_folder",
+    "description": "Create a new directory named new_folder"
+  },
+  {
+    "operation": "move",
+    "source": "example.txt",
+    "destination": "new_folder/example.txt",
+    "description": "Move example.txt into the new_folder directory"
+  },
+  {
+    "operation": "delete",
+    "file": "old_file.txt",
+    "description": "Delete the old_file.txt"
+  },
+  {
+    "operation": "modify",
+    "file": "config.cfg",
+    "description": "Update the configuration settings in config.cfg"
+  }
+]'
+    set refactor_json_structure "A list of dictionaries, each with an 'operation' key specifying the action ('create', 'create_dir', 'move', 'delete', 'modify'). $example_file"
     set move_create_keys "For 'create' operations, include 'file' and 'description' keys.
                           For 'move' operations, include 'source' and 'destination' keys.
                           For 'create_dir' operations, include a 'directory' key. 

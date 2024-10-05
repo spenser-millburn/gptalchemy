@@ -18,9 +18,8 @@ function gptcreate
 
     set json_structure "A list of dictionaries, each with a filename as the key and a description as the value."
     
-    set json_prompt "please create a json array describing each of the files required, as well as all methods and their method signatures/return types. 
-    The key should be the file path and the value should be a description of the implementation without going into extreme detail.
-    The structure of this file should be $json_structure."
+    set json_prompt "please create a json array describing each of the files required, as well as all methods and their method signatures/return types. The method signatures are critical as an ai agent will use them to interface multiple files together at generation. The key should be the file path and the value should be a description of the file contents without going into great detail. The structure of this file should be $json_structure."
+
 
     set typer_wrapper_prompt "This project should be implemented as a typer cli wrapper that is separate from the business logic file(s).
     please do not respond with any code yet"
@@ -65,7 +64,7 @@ function gptcreate
         e $file_name : $file_content_desc
         
         # Generate the file content using GPT
-        g "I would like you to please implement the following $file_content_desc and only respond with the file content. Please make sure the code is implemented in $code_language unless its a requirements.txt or something" > $file_name
+        g "I would like you to please implement the following $file_content_desc and only respond with the file content. Please make sure the code is implemented in $code_language unless its a requirements.txt or something. Also, please acknowledge the project plan but only use this information for context so you know how to interface with other files in the repository: $json. do not write the plan into any of the files" > $file_name
     end
 
     remove_code_blocks

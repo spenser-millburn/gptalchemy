@@ -9,7 +9,7 @@ function gptmodify
     set project_context (walk_and_cat_source)
     
     # Generate a description of the existing files using the project context
-    set json_structure "A list of dictionaries, each with a filename as the key and a description of the current file contents."
+    set json_structure "A list of dictionaries, each with a filename as the key and a description of the current file contents. make sure that the list is json parsable and respond with the file content only"
     set json_prompt "Please describe the current files in the project. The key should be the file path, and the value should be a brief description of the current contents. The structure of this file should be $json_structure"
     
     set file_overview_json (g from "$project_context" . "$json_prompt")
