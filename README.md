@@ -14,6 +14,7 @@ A powerful set of GPT/LLM based wrappers designed to catalyze and automate softw
 - **gptguard**: Validates user input by asking GPT to respond with a simple "true" or "false".
 
 ## Advanced features [ Experimental / Beta ] 
+- **gptiterate**: Iterate on the current repository by running it and addressing problems in the output
 - **gptarchitect**: Generates a list of subsystems based on a system description and implements each subsystem as a FastAPI app.
 - **gptarchitect_recursive**: Generates a detailed tree of subsystems and implements each as a FastAPI app.
 
@@ -21,6 +22,7 @@ A powerful set of GPT/LLM based wrappers designed to catalyze and automate softw
 ```
 docker compose run -it cli fish -c "gptcreate a minimal application for converting units"
 ```
+The built project will be located in the ./workspace directory. 
 
 ## Project Structure
 
@@ -33,6 +35,7 @@ project_folder/
     ├── gptsuggest.fish
     ├── gpttest.fish
     ├── gptguard.fish
+    ├── gptiterate.fish
     ├── gptarchitect.fish
     ├── gptarchitect_recursive.fish
     └── README.md
@@ -83,6 +86,10 @@ project_folder/
 
         yes thats correct
      ```
+
+1. **gptiterate**:
+   - Modifies existing project files by automatically running the project and iterating based on the result. 
+   - Usage: `gptiterate "Optionally provide what you want to iterate on"`
 
 
 8. **gptarchitect**:
